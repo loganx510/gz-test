@@ -1,0 +1,47 @@
+{
+  "name": "GetZorba - Test",
+  "version": "1.0.0",
+  "description": "GetZorba Test Task",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config ./index.js",
+    "check": "standard --verbose | snazzy",
+    "fix": "standard --fix",
+    "test": "NODE_ENV=test node -r dotenv/config node_modules/.bin/jest --runInBand",
+    "testone": "NODE_ENV=test node -r dotenv/config node_modules/.bin/jest src/server/test/SubmitAnswerRouteTest.js --runInBand",
+    "coverage": "NODE_ENV=test node -r dotenv/config node_modules/.bin/jest --runInBand --coverage"
+  },
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/loganx510/getzorba-test.git"
+  },
+  "author": "Mykola Urmach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loganx510/getzorba-test/issues"
+  },
+  "homepage": "https://github.com/loganx510/getzorba-test#readme",
+  "standard": {
+    "ignore": [
+      "*.test.js"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^29.2.2",
+    "jest-cli": "^29.2.2",
+    "nodemon": "^2.0.20",
+    "snazzy": "^9.0.0",
+    "standard": "^17.0.0",
+    "supertest": "^6.3.1"
+  },
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.1",
+    "mongoose-validator": "^2.1.0",
+    "sha1": "^1.1.1",
+    "slugify": "^1.6.5",
+    "uuid": "^9.0.0"
+  }
+}
